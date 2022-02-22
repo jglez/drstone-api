@@ -10,6 +10,10 @@ const characters = [
   {
     id: 3,
     name: "Yuzuriha Ogawa"
+  },
+  {
+    id: 4,
+    name: "Tsukasa Shishio"
   }
 ];
 
