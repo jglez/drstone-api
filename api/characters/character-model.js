@@ -1,4 +1,4 @@
-const characters = require("../data/characters.js");
+const characters = require("../../data/characters.js");
 
 function getCharacters() {
     return Promise.resolve(characters);
