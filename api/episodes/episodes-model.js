@@ -1,4 +1,4 @@
-const episodes = require("../data/episodes.js");
+const episodes = require("../../data/episodes.js");
 
 function getEpisodes() {
   return Promise.resolve(episodes);

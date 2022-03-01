@@ -1,6 +1,5 @@
-const express = require("express");
+const router = require("express").Router();
 const Character = require("./character-model.js")
-const router = express.Router();
 
 router.get("/", (req, res) => {
   Character.getCharacters()
