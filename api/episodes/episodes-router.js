@@ -11,4 +11,20 @@ router.get("/", (req, res) => {
     })
 });
 
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+
+  Episode.getEpisodeById(id)
+    .then(episode => {
+      if (!episode) {
+        res.status(404).json(`Character with id ${id} not found`);
+      } else {
+        res.status(200).json(episode);
+      }
+    })
+    .catch(err => {
+      res.status(500).json({ message: err.message });
+    })
+});
+
 module.exports = router;

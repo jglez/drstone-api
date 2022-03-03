@@ -1,13 +1,18 @@
 const express = require("express");
-const characterRouter = require("./characters/character-router.js");
-const episodeRouter = require("./episodes/episodes-router.js")
+const charactersRouter = require("./characters/characters-router.js");
+const episodesRouter = require("./episodes/episodes-router.js")
 
 const server = express();
 
-server.get("/api", (req, res) => res.json("Welcome to the Dr. Stone API. This is exhilarating. Get excited!"));
+server.get("/api", (req, res) => res.json("Welcome to the Dr. Stone API. This is exhilarating - get excited!"));
+server.use("/api/characters", charactersRouter);
+server.use("/api/episodes", episodesRouter);
 
-server.use("/api/characters", characterRouter);
-server.use("/api/episodes", episodeRouter);
-
+server.use("*", (req, res) => { // catch-all
+  res.status(404).send(`
+    <h1>Dr. Stone API</h1>
+    <p>Oops, we can't find what you're looking for!</p>
+  `)
+})
 
 module.exports = server;
