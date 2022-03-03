@@ -17,7 +17,7 @@ router.get("/:id", (req, res) => {
   Episode.getEpisodeById(id)
     .then(episode => {
       if (!episode) {
-        res.status(404).json(`Character with id ${id} not found`);
+        res.status(404).json(`Episode with id ${id} not found`);
       } else {
         res.status(200).json(episode);
       }
