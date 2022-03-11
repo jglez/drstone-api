@@ -6,7 +6,11 @@ const episodesRouter = require("./episodes/episodes-router.js")
 const server = express();
 server.use(express.static(path.join(__dirname, "../client/build")));
 
-server.get("/api", (req, res) => res.json("Welcome to the Dr. Stone API. This is exhilarating - get excited!"));
+server.get("/api", (req, res) => res.json({
+  characters: "https://drstone-api.herokuapp.com/api/characters",
+  episodes: "https://drstone-api.herokuapp.com/api/episodes",
+}));
+
 server.use("/api/characters", charactersRouter);
 server.use("/api/episodes", episodesRouter);
 
