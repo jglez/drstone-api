@@ -1,11 +1,16 @@
+const baseUrl = require("../utils/baseUrl.js");
+const paths = require("../utils/paths.js");
+
 const characters = [
   {
     id: 1,
-    name: "Senku Ishigami"
+    name: "Senku Ishigami",
+    image: `${baseUrl}${paths.characters}/1/avatar`
   },
   {
     id: 2,
-    name: "Taiju Oki"
+    name: "Taiju Oki",
+    image: `${baseUrl}${paths.characters}/2/avatar`
   },
   {
     id: 3,

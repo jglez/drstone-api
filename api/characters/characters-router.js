@@ -1,5 +1,6 @@
+const path = require("path");
 const router = require("express").Router();
-const Character = require("./characters-model.js")
+const Character = require("./characters-model.js");
 
 router.get("/", (req, res) => {
   Character.getCharacters()
@@ -25,6 +26,12 @@ router.get("/:id", (req, res) => {
     .catch(err => {
       res.status(500).json({ message: err.message });
     });
+});
+
+router.get("/:id/avatar", (req, res) => {
+  const { id } = req.params;
+
+  res.sendFile(path.join(__dirname, `../../images/${id}.jpeg`));
 });
 
 module.exports = router;
