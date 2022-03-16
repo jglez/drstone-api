@@ -42,16 +42,12 @@ table {
 	border-spacing: 0;
 }
 
-/* Home */
-#home {
-  background-color: #24282F;
-  height: 100vh;
-}
-
+/* Nav */
 nav {
   background-color: white;
   display: flex;
   justify-content: flex-end;
+  /* border: 5px solid green; */
 }
 
 nav a {
@@ -69,12 +65,20 @@ nav a:hover {
   color: #539361;
 }
 
+/* Home */
+#home {
+  background-color: #24282F;
+  /* height: 100vh; */
+  /* border: 5px solid red; */
+}
+
 header {
   background-color: white;
   height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 5px solid blue; */
 }
 
 header h1 {
@@ -88,12 +92,21 @@ header h1:hover {
   color: #539361;
 }
 
-/* Character Card */
+/* Cards Container */
+#cards-container {
+  /* border: 5px solid yellow; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
+/* Character Card */
 #character-card {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  width: fit-content;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
   background-color: #3C3E44;
   border-radius: 20px;
   overflow: hidden;

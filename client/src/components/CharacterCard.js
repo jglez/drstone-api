@@ -1,24 +1,19 @@
-import { useState } from "react"
-import senku from "../images/1.jpeg";
-import charactersData from "../data/characters.js";
-
-function CharacterCard() {
-
-  const [characters, setCharacters] = useState(charactersData);
+function CharacterCard(props) {
+  const { name, firstAppearance, affiliation } = props.characterObj;
 
   return(
     <>
       <div id="character-card">
-        <img src={senku} />
+        <img src={props.image} />
 
         <div id="card-text">
-          <h2>{characters[0].name}</h2>
+          <h2>{name}</h2>
 
           <h3>First Appearance:</h3>
-          <p>{characters[0].firstAppearance}</p>
+          <p>{firstAppearance}</p>
 
           <h3>Affiliation:</h3>
-          <p>{characters[0].affiliation.current}</p>
+          <p>{affiliation.current}</p>
         </div>
       </div>
     </>
