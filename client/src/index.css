@@ -54,7 +54,7 @@ nav a {
   margin-right: 50px;
   margin-top: 20px;
   font-family: arial;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-decoration: none;
   color: #24282F;
@@ -104,14 +104,15 @@ header h1:hover {
 #character-card {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  width: 20rem;
+  width: 23rem;
   display: flex;
   flex-direction: column;
   background-color: #3C3E44;
   border-radius: 20px;
   overflow: hidden;
-  margin-left: 1rem;
-  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  height: 36rem;
 }
 
 #character-card h2 {
@@ -135,9 +136,44 @@ header h1:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: .5rem;
+  margin-left: 1rem;
+  /* border: 3px solid red; */
 }
 
 /* header h1::selection {
   background-color: #ffb7b7;
 } */
+
+/* About Page */
+#about-page {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 0 10rem 0;
+}
+
+#about-container {
+  height: 100vh;
+  width: 900px;
+  margin-top: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#about-container h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  color: #539361;
+}
+
+#about-container p{
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+
+#about-container a{
+  font-size: 1.4rem;
+  text-decoration: underline #539361;
+  color: black;
+}
