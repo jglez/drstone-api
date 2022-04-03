@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 const charactersRouter = require("./characters/characters-router.js");
 const episodesRouter = require("./episodes/episodes-router.js")
 
 const server = express();
+server.use(cors({origin: "*", methods: ["GET"]}));
 server.use(express.static(path.join(__dirname, "../client/build")));
 
 server.get("/api", (req, res) => res.json({
