@@ -2,10 +2,10 @@ import APISnippet from "./APISnippet";
 import baseUrl from "../utils/baseUrl.js";
 import paths from "../utils/paths.js";
 
-const apiResources = [
-  baseUrl + paths.characters,
-  baseUrl+ paths.episodes
-]
+const apiResources = {
+  characters: baseUrl + paths.characters,
+  episodes: baseUrl+ paths.episodes
+}
 
 function Docs() {
   return(
