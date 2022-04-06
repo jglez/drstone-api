@@ -1,3 +1,12 @@
+import APISnippet from "./APISnippet";
+import baseUrl from "../utils/baseUrl.js";
+import paths from "../utils/paths.js";
+
+const apiResources = [
+  baseUrl + paths.characters,
+  baseUrl+ paths.episodes
+]
+
 function Docs() {
   return(
     <div id="docs-page">
@@ -9,25 +18,7 @@ function Docs() {
         <p>Base URL: <a target="_blank" href="https://drstone-api.herokuapp.com/api">https://drstone-api.herokuapp.com/api</a></p>
         <p>The base URL contains information about the available resouces on the API. All requests are <span class="info">GET</span> requests, and all responses will return data in <span className="info">json</span>.</p>
 
-        <code>
-          <div className="code-text"><span className="value">GET</span> <span className="grey">https://drstone-api.herokuapp.com/api</span></div>
-        </code>
-
-        {/* Need to fix this later, really ugly atm */}
-        <code>
-          <div className="code-text">
-            <span className="grey">&#123;</span><br />
-            <span className="key">&nbsp;&nbsp;"characters"</span>
-            <span class="grey">&#58;</span>
-            <span className="value"> "https://drstone-api.herokuapp.com/api/characters"</span>
-            <span class="grey">,</span><br />
-
-            <span className="key">&nbsp;&nbsp;"episodes"</span>
-            <span class="grey">&#58;</span>
-            <span className="value"> "https://drstone-api.herokuapp.com/api/episodes"</span>
-            <br /><span className="grey">&#125;</span>
-          </div>
-        </code>
+        <APISnippet type="GET" path={baseUrl + "/api"} data={apiResources} />
       </div>
     </div>
   )
