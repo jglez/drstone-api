@@ -4,7 +4,7 @@ function CharacterCard(props) {
   return(
     <>
       <div id="character-card">
-        <img src={props.image} />
+        <img alt="Screenshot of a character from Dr.Stone" src={props.image} />
 
         <div id="card-text">
           <h2>{name}</h2>
