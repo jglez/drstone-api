@@ -1,5 +1,5 @@
-const baseUrl = require("../utils/baseUrl.js");
-const paths = require("../utils/paths.js");
+import baseUrl from "../utils/baseUrl.js";
+import paths from "../utils/paths.js";
 
 const characters = [
   {
@@ -172,4 +172,4 @@ const characters = [
   }
 ];
 
-module.exports = characters;
+export default characters;

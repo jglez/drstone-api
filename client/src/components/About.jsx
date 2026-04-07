@@ -1,10 +1,9 @@
 function About() {
-  return(
+  return (
     <div id="about-page">
       <div id="about-container">
-
         <h2>What is this?</h2>
-        <p>This is a REST API based on the manga and anime series <a target="_blank" href="https://dr-stone.fandom.com/wiki/Dr._Stone_(Anime)">Dr. Stone</a>, written by <a target="_blank" href="https://dr-stone.fandom.com/wiki/Riichiro_Inagaki">Riichiro Inagaki</a> and illustrated by <a target="_blank" href="https://dr-stone.fandom.com/wiki/Boichi">Boichi</a>. You have access to information on the most significant characters &#40;such as their occupation, affiliation, first appearance, etc.&#41;, their pictures, and basic information about the episodes.<br /><br />Disclaimer: This API is specifically for the anime as I haven't read the manga!</p>
+        <p>This is a REST API based on the manga and anime series <a target="_blank" rel="noreferrer" href="https://dr-stone.fandom.com/wiki/Dr._Stone_(Anime)">Dr. Stone</a>, written by <a target="_blank" rel="noreferrer" href="https://dr-stone.fandom.com/wiki/Riichiro_Inagaki">Riichiro Inagaki</a> and illustrated by <a target="_blank" rel="noreferrer" href="https://dr-stone.fandom.com/wiki/Boichi">Boichi</a>. You have access to information on the most significant characters &#40;such as their occupation, affiliation, first appearance, etc.&#41;, their pictures, and basic information about the episodes.<br /><br />Disclaimer: This API is specifically for the anime as I haven't read the manga!</p>
 
         <h2>Who are you?</h2>
         <p>I'm Jorge, a guy from Chicago who loves learning about almost anything but mostly about technology and a little about psychology. I like watching anime in my spare time &#40;hence this project!&#41;</p>
@@ -14,10 +13,9 @@ function About() {
 
         <h2>Copyright?</h2>
         <p>Dr. Stone is created by Riichiro Inagaki and Boichi. The data and images are used without claim of ownership and belong to their respective owners.</p>
-
       </div>
     </div>
-  )
+  );
 }
 
 export default About;

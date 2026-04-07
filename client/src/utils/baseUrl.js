@@ -1,3 +1,3 @@
-const baseUrl = "https://drstone-api.herokuapp.com";
+const baseUrl = import.meta.env.VITE_API_BASE_URL || (typeof window !== "undefined" ? window.location.origin : "");
 
-module.exports = baseUrl;
+export default baseUrl;

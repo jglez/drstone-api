@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=22.12.0 <23"
+  },
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm i && npm run build",
+    "build": "npm --prefix client ci --include=dev && npm --prefix client run build",
     "dev": "nodemon index.js"
   },
   "repository": {
@@ -20,12 +23,12 @@
   },
   "homepage": "https://github.com/jglez/drstone-api#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^4.22.1"
   },
   "devDependencies": {
-    "eslint": "^8.10.0",
-    "nodemon": "^2.0.15"
+    "eslint": "^8.57.1",
+    "nodemon": "^3.1.14"
   }
 }
